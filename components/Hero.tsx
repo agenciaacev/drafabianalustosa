@@ -11,7 +11,7 @@ export default function Hero() {
           alt="Dra. Fabiana Lustosa, endocrinologista, em seu consultório no Meireles, Fortaleza"
           fill
           priority
-          sizes="100vw"
+          sizes="100vh"
           className="object-cover object-right animate-slow-zoom"
         />
         {/* Warm legibility gradient */}
