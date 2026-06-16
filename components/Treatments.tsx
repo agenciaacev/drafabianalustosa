@@ -1,9 +1,18 @@
 import Link from "next/link";
+import Image from "next/image";
 import { treatments } from "@/lib/content";
 
 const pageFor: Record<string, string> = {
   emagrecimento: "/emagrecimento",
   menopausa: "/menopausa",
+};
+
+const imageMap: Record<string, string> = {
+  emagrecimento: "/images/emagrecimento.png",
+  menopausa: "/images/menopausa.png",
+  diabetes: "/images/controle-do-diabetes.png",
+  "reposicao-hormonal": "/images/reposicao-hormonal.png",
+  longevidade: "/images/logenvidade.png",
 };
 
 export default function Treatments() {
@@ -21,44 +30,57 @@ export default function Treatments() {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-gold/40 bg-gold/40 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-6">
           {treatments.map((t, i) => {
             const href = pageFor[t.slug];
-            const Inner = (
-              <div className="flex h-full flex-col bg-cream p-8 transition-colors duration-300 group-hover:bg-[#fdf4ea] md:p-10">
-                <span className="font-body text-xs tracking-[0.2em] text-gold">
-                  0{i + 1}
-                </span>
-                <h3 className="mt-5 font-display text-2xl text-ink md:text-[1.7rem]">
-                  {t.title}
-                </h3>
-                <p className="mt-4 flex-1 font-body text-sm leading-relaxed text-ink-soft">
-                  {t.short}
-                </p>
-                <span className="mt-8 inline-flex items-center gap-2 font-body text-xs uppercase tracking-[0.18em] text-taupe">
-                  {href ? "Saber mais" : "Na consulta"}
-                  {href && (
-                    <span className="transition-transform duration-300 group-hover:translate-x-1">
-                      →
-                    </span>
-                  )}
-                </span>
+            const img = imageMap[t.slug];
+
+            const colClass = i === 3 ? "lg:col-start-2 lg:col-span-2" : "lg:col-span-2";
+
+            const CardContent = (
+              <div className="group relative overflow-hidden rounded-2xl aspect-square">
+                {img && (
+                  <Image
+                    src={img}
+                    alt={t.title}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
+                <div className="absolute inset-0 flex flex-col justify-end p-7">
+                  <h3 className="font-display text-2xl text-white md:text-[1.6rem]">
+                    {t.title}
+                  </h3>
+                  <p className="mt-2 font-body text-sm leading-relaxed text-white/75">
+                    {t.short}
+                  </p>
+                  <span className="mt-5 inline-flex items-center gap-2 font-body text-xs uppercase tracking-[0.18em] text-white/60">
+                    {href ? "Saber mais" : "Na consulta"}
+                    {href && (
+                      <span className="transition-transform duration-300 group-hover:translate-x-1">
+                        →
+                      </span>
+                    )}
+                  </span>
+                </div>
               </div>
             );
 
             return (
               <div
                 key={t.slug}
-                className="group"
+                className={colClass}
                 data-aos="fade-up"
                 data-aos-delay={(i % 3) * 80}
               >
                 {href ? (
                   <Link href={href} className="block h-full">
-                    {Inner}
+                    {CardContent}
                   </Link>
                 ) : (
-                  Inner
+                  CardContent
                 )}
               </div>
             );

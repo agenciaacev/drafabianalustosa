@@ -94,19 +94,6 @@ export const treatments: Treatment[] = [
     ],
   },
   {
-    slug: "hipertrofia",
-    title: "Hipertrofia e performance",
-    short:
-      "Identificar o que trava o seu progresso por dentro, com base em evidências.",
-    body: "Você treina, segue dieta, usa suplementação e mesmo assim não consegue ganhar massa muscular no ritmo esperado. Antes de trocar o programa de treino, vale investigar o que está acontecendo por dentro. Analisamos níveis hormonais, função tireoidiana, deficiências de vitaminas e minerais, qualidade do sono e composição corporal pela bioimpedância InBody.",
-    forWho: [
-      "Treina consistentemente mas não vê progresso",
-      "Quer otimizar suplementação com base em exames",
-      "Suspeita de baixa testosterona ou deficiência hormonal",
-      "Pratica esportes de alta performance",
-    ],
-  },
-  {
     slug: "longevidade",
     title: "Longevidade saudável",
     short:
@@ -146,34 +133,49 @@ export const process = [
 
 export const testimonials = [
   {
-    quote:
-      "A Dra. Fabiana é muito competente e atenciosa. Seus diagnósticos são assertivos e o seu acompanhamento é muito eficaz.",
-    name: "Gleyciane Nunes",
-    treatment: "Acompanhamento de emagrecimento",
+    quote: "Primeira consulta c a Dra. Fabiana e foi incrível, médica que escuta e domina do assunto.",
+    name: "Alanna Neumann",
+    date: "15 horas atrás",
   },
   {
-    quote:
-      "Excelente médica, atenciosa, simpática. Consulta bem detalhada. Gostei muito.",
-    name: "Maria Belchior",
-    treatment: "Endocrinologia e reposição hormonal",
+    quote: "Muito estudiosa, inteligente, comprometida e séria.",
+    name: "Leave'n Live Free",
+    date: "3 semanas atrás",
   },
   {
-    quote:
-      "Dra. Fabiana maravilhosa! Super atenciosa, inteligente, prestativa, carismática. Me passou muita segurança e calma. Me fez confiar que tudo ia dar certo!",
-    name: "Lurdinha",
-    treatment: "Tratamento de menopausa",
+    quote: "Atendimento impecável, clínica muito organizada. Agora não quero outra endócrino!!!",
+    name: "Eduarda Paiva",
+    date: "1 mês atrás",
   },
   {
-    quote:
-      "A Dra. Fabiana é muito competente em sua área! Sempre está à frente das novidades e novos estudos em sua especialidade!",
-    name: "Phalema",
-    treatment: "Acompanhamento endocrinológico",
+    quote: "Uma Dra maravilhosa, muito incrível! Atendimento impecável.",
+    name: "Ávila Marques",
+    date: "2 meses atrás",
   },
   {
-    quote:
-      "Profissional de altíssima qualidade. Super atenciosa, fazendo questão de deixar o paciente à vontade.",
-    name: "Isabela",
-    treatment: "Emagrecimento",
+    quote: "A Dra. Fabiana Lustosa é uma excelente profissional, muito competente e atenciosa. Saí do consultório muito feliz, superou as minhas expectativas, super indico.",
+    name: "Débora Costa",
+    date: "4 meses atrás",
+  },
+  {
+    quote: "Médica Endocrinologista super competente, estudiosa, atualizada, paciente e comprometida com a saúde e o bem estar de seus pacientes! Passou 1 hora explicando e orientando com as melhores dicas e soluções para emagrecer com saude e qualidade de vida. Amei!",
+    name: "Sellene Benevides",
+    date: "6 meses atrás",
+  },
+  {
+    quote: "Experiência maravilhosa! Médica atenciosa, gentil e muito capacitada. Achei uma Médica pra chamar de \"minha\".",
+    name: "Viena",
+    date: "6 meses atrás",
+  },
+  {
+    quote: "Dra Fabiana é uma profissional atenciosa e comprometida com a saúde e o bem estar integral dos pacientes. A atendente Eli também é maravilhosa! Recomendo!",
+    name: "Fabiana de L Maia",
+    date: "6 meses atrás",
+  },
+  {
+    quote: "A Dra. Fabiana e sua atendente são super solícitas, esclarecem todas as dúvidas e tem uma atenção ímpar com os pacientes. Gratidão à Dra. por devolver minha auto estima.",
+    name: "Nair Pinheiro",
+    date: "6 meses atrás",
   },
 ];
 

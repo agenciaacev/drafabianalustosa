@@ -17,7 +17,7 @@ export default function Hero() {
         <div className="wrap pb-10 md:pb-16 2xl:pb-28">
           <div className="max-w-2xl">
             <p
-              className="eyebrow"
+              className="eyebrow !text-white"
               data-aos="fade-up"
               style={{ textShadow: "0 1px 6px rgba(0,0,0,0.35)" }}
             >
