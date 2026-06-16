@@ -8,13 +8,13 @@ export default function Location() {
         <div className="overflow-hidden rounded-3xl bg-ink text-cream">
           <div className="grid lg:grid-cols-2">
             {/* Photo */}
-            <div className="relative min-h-[320px] lg:min-h-full">
+            <div className="relative min-h-[480px] lg:min-h-full">
               <Image
-                src="/images/location.jpg"
-                alt="Consultório da Dra. Fabiana Lustosa no Harmony Medical Center, Meireles"
+                src="/images/portrait-couch.jpg"
+                alt="Dra. Fabiana Lustosa, endocrinologista em Fortaleza"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
+                className="object-cover object-top"
               />
             </div>
 

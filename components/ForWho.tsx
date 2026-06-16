@@ -1,6 +1,14 @@
 import Image from "next/image";
 import { forWho, whatsappLink } from "@/lib/content";
 
+function Check() {
+  return (
+    <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-gold text-gold text-xs">
+      ✓
+    </span>
+  );
+}
+
 export default function ForWho() {
   return (
     <section className="relative overflow-hidden py-24 md:py-36">
@@ -26,25 +34,28 @@ export default function ForWho() {
           </h2>
         </div>
 
-        <ul className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-cream/15 bg-cream/10 sm:grid-cols-2">
-          {forWho.map((item, i) => (
-            <li
-              key={i}
-              className="flex items-start gap-5 bg-ink/40 p-7 backdrop-blur-sm md:p-8"
-              data-aos="fade-up"
-              data-aos-delay={(i % 2) * 80}
-            >
-              <span className="font-display text-xl italic text-gold">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <p className="font-body text-[15px] leading-relaxed text-cream/90">
-                {item}
-              </p>
-            </li>
-          ))}
+        <ul className="mt-14 grid gap-3 sm:grid-cols-2">
+          {forWho.map((item, i) => {
+            const isLastOdd = i === forWho.length - 1 && forWho.length % 2 !== 0;
+            return (
+              <li
+                key={i}
+                className={`flex items-start gap-4 rounded-xl border border-cream/15 bg-cream/10 p-6 backdrop-blur-sm transition-colors duration-300 hover:bg-cream/15 ${
+                  isLastOdd ? "sm:col-span-2 sm:max-w-[calc(50%-0.375rem)] sm:mx-auto" : ""
+                }`}
+                data-aos="fade-up"
+                data-aos-delay={(i % 2) * 80}
+              >
+                <Check />
+                <p className="font-body text-[15px] leading-relaxed text-cream/90">
+                  {item}
+                </p>
+              </li>
+            );
+          })}
         </ul>
 
-        <div className="mt-12" data-aos="fade-up">
+        <div className="mt-12 flex justify-center" data-aos="fade-up">
           <a
             href={whatsappLink(
               "Olá, Dra. Fabiana. Me identifiquei com o acompanhamento e gostaria de agendar."
