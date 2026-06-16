@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { clinic, whatsappLink } from "@/lib/content";
 
 export default function Location() {
@@ -7,19 +6,20 @@ export default function Location() {
       <div className="wrap">
         <div className="overflow-hidden rounded-3xl bg-ink text-cream">
           <div className="grid lg:grid-cols-2">
-            {/* Photo */}
-            <div className="relative min-h-[480px] lg:min-h-full">
-              <Image
-                src="/images/portrait-couch.jpg"
-                alt="Dra. Fabiana Lustosa, endocrinologista em Fortaleza"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover object-top"
+            {/* Map */}
+            <div className="relative min-h-[360px] lg:min-h-full overflow-hidden">
+              <iframe
+                src="https://maps.google.com/maps?q=Harmony+Medical+Center+Av+Dom+Luis+1233+Meireles+Fortaleza+CE&output=embed&z=17&hl=pt-BR"
+                className="absolute inset-0 w-full h-full border-0"
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Localização da Dra. Fabiana Lustosa"
               />
             </div>
 
             {/* Info */}
-            <div className="p-10 md:p-14 lg:p-16">
+            <div className="p-8 md:p-10 lg:p-12">
               <p
                 className="eyebrow !text-gold before:!bg-gold"
                 data-aos="fade-up"
@@ -43,7 +43,7 @@ export default function Location() {
               </p>
 
               <dl
-                className="mt-10 space-y-5 border-t border-cream/15 pt-8 font-body text-sm"
+                className="mt-6 space-y-4 border-t border-cream/15 pt-6 font-body text-sm"
                 data-aos="fade-up"
                 data-aos-delay="160"
               >
@@ -78,7 +78,7 @@ export default function Location() {
               </dl>
 
               <div
-                className="mt-10 flex flex-col gap-4 sm:flex-row"
+                className="mt-6 flex flex-col gap-4 sm:flex-row"
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
