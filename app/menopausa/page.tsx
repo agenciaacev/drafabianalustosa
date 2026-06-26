@@ -31,14 +31,16 @@ export default function MenopausaPage() {
         title={
           <>
             Você não precisa aceitar esses sintomas como{" "}
-            <span className="italic text-taupe">normais</span>
+            <span className="italic text-gold">normais</span>
           </>
         }
         subtitle="Fogachos, insônia, irritabilidade, ganho de gordura abdominal e queda de libido têm nome, têm causa e têm tratamento."
+        image="/images/sitting-wide.jpg"
+        cta="Olá, Dra. Fabiana. Gostaria de agendar uma consulta sobre menopausa."
       />
 
       {/* Intro + photo */}
-      <section className="bg-cream pb-24 md:pb-32">
+      <section className="bg-cream py-24 md:py-32">
         <div className="wrap grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:gap-20">
           <div data-aos="fade-up">
             <div className="space-y-5 font-body text-base leading-relaxed text-ink-soft md:text-lg">

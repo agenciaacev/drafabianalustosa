@@ -5,6 +5,9 @@ import { treatments } from "@/lib/content";
 const pageFor: Record<string, string> = {
   emagrecimento: "/emagrecimento",
   menopausa: "/menopausa",
+  diabetes: "/diabetes",
+  "reposicao-hormonal": "/reposicao-hormonal",
+  longevidade: "/longevidade",
 };
 
 const imageMap: Record<string, string> = {

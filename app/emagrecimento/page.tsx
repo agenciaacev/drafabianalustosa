@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import CtaBanner from "@/components/CtaBanner";
+import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 
 export const metadata: Metadata = {
   title:
@@ -31,22 +32,23 @@ const antesDepois = [
     label: "Emagrecimento",
     period: "3 meses de acompanhamento",
     detail: "Perda de 12 kg com manutenção de massa muscular e regularização hormonal.",
-    antes: "/images/antes-depois/caso-1-antes.jpg",
-    depois: "/images/antes-depois/caso-1-depois.jpg",
+    // Substitua pelos caminhos reais quando tiver as fotos
+    antes: "/images/portrait-couch.jpg",
+    depois: "/images/portrait-serious.jpg",
   },
   {
     label: "Recomposição corporal",
     period: "5 meses de acompanhamento",
     detail: "Redução de gordura visceral e aumento de massa magra com ajuste metabólico.",
-    antes: "/images/antes-depois/caso-2-antes.jpg",
-    depois: "/images/antes-depois/caso-2-depois.jpg",
+    antes: "/images/standing.jpg",
+    depois: "/images/hero.jpg",
   },
   {
     label: "Controle metabólico",
     period: "4 meses de acompanhamento",
     detail: "Normalização da hemoglobina glicada e redução de 9 kg com protocolo personalizado.",
-    antes: "/images/antes-depois/caso-3-antes.jpg",
-    depois: "/images/antes-depois/caso-3-depois.jpg",
+    antes: "/images/sitting-wide.jpg",
+    depois: "/images/location.jpg",
   },
 ];
 
@@ -65,35 +67,6 @@ const faqLocal = [
   },
 ];
 
-function CameraPlaceholder({ label }: { label: string }) {
-  return (
-    <div className="relative flex aspect-[3/4] flex-col items-center justify-center gap-3 bg-gold/10">
-      <svg
-        width="32"
-        height="32"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        className="text-gold/50"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z"
-        />
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z"
-        />
-      </svg>
-      <p className="font-body text-[11px] uppercase tracking-widest text-gold/50">
-        {label}
-      </p>
-    </div>
-  );
-}
 
 export default function EmagrecimentoPage() {
   return (
@@ -103,14 +76,16 @@ export default function EmagrecimentoPage() {
         title={
           <>
             Emagrecimento com acompanhamento{" "}
-            <span className="italic text-taupe">endocrinológico</span>
+            <span className="italic text-gold">endocrinológico</span>
           </>
         }
         subtitle="Dieta e exercício são parte da solução, mas raramente são a causa do problema. O endocrinologista investiga o que ninguém investigou antes."
+        image="/images/portrait-serious.jpg"
+        cta="Olá, Dra. Fabiana. Gostaria de agendar uma consulta sobre emagrecimento."
       />
 
       {/* Why */}
-      <section className="bg-cream pb-24 md:pb-32">
+      <section className="bg-cream py-24 md:py-32">
         <div className="wrap grid gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div className="relative aspect-[4/5] overflow-hidden rounded-2xl" data-aos="fade-up">
             <Image
@@ -220,39 +195,16 @@ export default function EmagrecimentoPage() {
 
           <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {antesDepois.map((item, i) => (
-              <article
+              <BeforeAfterSlider
                 key={i}
-                className="overflow-hidden rounded-2xl border border-gold/40 bg-cream"
-                data-aos="fade-up"
-                data-aos-delay={i * 80}
-              >
-                <div className="grid grid-cols-2">
-                  {/* Antes */}
-                  <div className="relative overflow-hidden">
-                    <CameraPlaceholder label="Antes" />
-                    <span className="absolute left-3 top-3 rounded-full bg-ink/65 px-3 py-1 font-body text-[11px] uppercase tracking-widest text-cream/90 backdrop-blur-sm">
-                      Antes
-                    </span>
-                  </div>
-
-                  {/* Depois */}
-                  <div className="relative overflow-hidden border-l border-gold/30">
-                    <CameraPlaceholder label="Depois" />
-                    <span className="absolute right-3 top-3 rounded-full bg-gold px-3 py-1 font-body text-[11px] uppercase tracking-widest text-ink">
-                      Depois
-                    </span>
-                  </div>
-                </div>
-
-                <div className="p-6">
-                  <p className="font-body text-[11px] uppercase tracking-eyebrow text-gold">
-                    {item.label} · {item.period}
-                  </p>
-                  <p className="mt-2 font-body text-sm leading-relaxed text-ink-soft">
-                    {item.detail}
-                  </p>
-                </div>
-              </article>
+                antes={item.antes}
+                depois={item.depois}
+                label={item.label}
+                period={item.period}
+                detail={item.detail}
+                aos="fade-up"
+                aosDelay={i * 80}
+              />
             ))}
           </div>
         </div>
