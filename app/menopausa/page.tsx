@@ -7,66 +7,134 @@ export const metadata: Metadata = {
   title:
     "Menopausa e climatério em Fortaleza | Dra. Fabiana Lustosa — Endocrinologista",
   description:
-    "Especialista em menopausa e reposição hormonal em Fortaleza. Avaliação completa de TRH, tratamento de fogachos, insônia e ganho de peso na menopausa. CRM-CE 6123.",
+    "Especialista em menopausa e reposição hormonal em Fortaleza. Avaliação hormonal completa, tratamento individualizado para fogachos, insônia, irritabilidade e queda de libido. CRM-CE 6123.",
   alternates: { canonical: "/menopausa" },
 };
 
-const sintomas = [
-  "Fogachos e suores noturnos",
-  "Insônia e alterações do sono",
-  "Ganho de gordura abdominal",
-  "Irritabilidade e oscilações de humor",
-  "Queda de libido",
-  "Cansaço e falta de energia",
-  "Ressecamento vaginal",
-  "Dificuldade de concentração e memória",
-  "Perda de massa muscular e óssea",
+const dores = [
+  "Calores e sudorese que aparecem do nada",
+  "Noites mal dormidas, mesmo cansada",
+  "Mudança de humor que você não reconhece em si mesma",
+  "Queda de libido e desconforto que ninguém te explicou",
+  'Já ouviu "isso é normal, vai passar" e nada passou',
+];
+
+const fases = [
+  {
+    n: "01",
+    title: "Avaliação hormonal completa e histórico de sintomas",
+    text: "Avaliamos estrogênio, progesterona, testosterona, FSH, LH, TSH e outros marcadores relevantes. Seu histórico clínico e familiar entra no diagnóstico antes de qualquer decisão.",
+  },
+  {
+    n: "02",
+    title: "Identificação do que está causando cada sintoma",
+    text: "Não todos os sintomas têm a mesma causa. Antes de prescrever, identificamos o que está desequilibrado e por quê — sem generalizar, sem achismo.",
+  },
+  {
+    n: "03",
+    title: "Plano com reposição hormonal, se indicada, e ajustes de estilo de vida",
+    text: "A reposição hormonal, quando indicada, é prescrita na dose e via adequadas para o seu caso. Acompanhamos também alimentação, sono e atividade física como parte do tratamento.",
+  },
+  {
+    n: "04",
+    title: "Acompanhamento contínuo com reavaliação periódica",
+    text: "Os hormônios mudam, os sintomas mudam, e o tratamento acompanha. Cada retorno inclui reavaliação clínica e laboratorial para ajuste fino do protocolo.",
+  },
+];
+
+const faqLocal = [
+  {
+    q: "A reposição hormonal é segura?",
+    a: "Quando bem indicada e acompanhada, sim. Por isso a avaliação completa vem antes de qualquer prescrição.",
+  },
+  {
+    q: "Toda mulher na menopausa precisa de reposição hormonal?",
+    a: "Não. A indicação depende dos seus exames, sintomas e histórico de saúde.",
+  },
+  {
+    q: "Em quanto tempo os sintomas melhoram?",
+    a: "Varia de paciente para paciente. O acompanhamento permite ajustar a dose conforme a resposta.",
+  },
+  {
+    q: "Aceita convênio?",
+    a: "Não. Atendimento particular, com recibo para reembolso.",
+  },
+  {
+    q: "Preciso levar exames antigos na primeira consulta?",
+    a: "Sim, ajuda a montar um histórico mais completo do seu quadro hormonal.",
+  },
 ];
 
 export default function MenopausaPage() {
   return (
     <>
+      {/* 1 · HERO */}
       <PageHero
-        eyebrow="Menopausa e climatério em Fortaleza"
+        eyebrow="Endocrinologista em Fortaleza · Especialista em menopausa e climatério"
         title={
           <>
-            Você não precisa aceitar esses sintomas como{" "}
-            <span className="italic text-gold">normais</span>
+            Calor, insônia, irritação e falta de libido não são "coisa da
+            idade".{" "}
+            <span className="italic text-gold">
+              São hormônios que podem ser tratados.
+            </span>
           </>
         }
-        subtitle="Fogachos, insônia, irritabilidade, ganho de gordura abdominal e queda de libido têm nome, têm causa e têm tratamento."
+        subtitle="Avaliação hormonal completa para identificar a causa real dos seus sintomas, com reposição hormonal individualizada quando indicada."
         image="/images/sitting-wide.jpg"
-        cta="Olá, Dra. Fabiana. Gostaria de agendar uma consulta sobre menopausa."
+        cta="Olá, Dra. Fabiana. Gostaria de agendar uma avaliação hormonal para menopausa."
+        ctaLabel="Agendar avaliação hormonal"
+        seal="Formada UFC · Residência USP · Mestrado UNIFESP · CRM-CE 6123"
       />
 
-      {/* Intro + photo */}
+      {/* 2 · DOR */}
+      <section className="bg-ink py-24 md:py-32">
+        <div className="wrap">
+          <h2
+            className="display mx-auto max-w-2xl text-center text-3xl text-cream md:text-4xl"
+            data-aos="fade-up"
+          >
+            Se você se identifica com algo aqui,{" "}
+            <span className="italic text-gold">não é "só a idade".</span>
+          </h2>
+
+          <ul className="mx-auto mt-14 max-w-2xl space-y-4">
+            {dores.map((d, i) => (
+              <li
+                key={i}
+                className="flex items-center gap-5 rounded-xl border border-cream/10 bg-cream/5 px-7 py-5 backdrop-blur-sm"
+                data-aos="fade-up"
+                data-aos-delay={i * 70}
+              >
+                <span className="text-gold text-lg" aria-hidden="true">
+                  ✦
+                </span>
+                <span className="font-body text-base leading-relaxed text-cream/85 md:text-lg">
+                  {d}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* 3 · MECANISMO */}
       <section className="bg-cream py-24 md:py-32">
         <div className="wrap grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:gap-20">
           <div data-aos="fade-up">
-            <div className="space-y-5 font-body text-base leading-relaxed text-ink-soft md:text-lg">
+            <p className="eyebrow">Baseado em exames, não em achismo</p>
+            <h2 className="display mt-6 text-3xl text-ink md:text-4xl">
+              Reposição hormonal bem indicada, baseada em exame
+            </h2>
+            <div className="mt-7 space-y-5 font-body text-base leading-relaxed text-ink-soft md:text-lg">
               <p>
-                A menopausa é uma fase fisiológica, mas os sintomas incômodos são
-                a resposta do corpo à queda de estrogênio e progesterona. Com
-                avaliação médica adequada, a maioria desses sintomas pode ser
-                tratada de forma eficaz e segura.
+                Cada corpo responde de um jeito diferente à queda hormonal da
+                menopausa. Antes de qualquer reposição, avaliamos seu perfil
+                hormonal completo e seu risco individual.
               </p>
               <p>
-                Você não precisa aceitar esse período como algo a ser apenas
-                suportado.
-              </p>
-            </div>
-
-            <div className="mt-12 rounded-2xl bg-[#f7e7d6] p-9 md:p-11">
-              <h2 className="display text-2xl text-ink md:text-3xl">
-                O que é a terapia de reposição hormonal (TRH)
-              </h2>
-              <p className="mt-5 font-body text-base leading-relaxed text-ink-soft">
-                A TRH consiste na reposição dos hormônios que o organismo deixa
-                de produzir na menopausa, principalmente estrogênio e
-                progesterona. Quando bem indicada, melhora os fogachos, a
-                qualidade do sono, o humor, a libido e a composição corporal.
-                Avaliamos benefícios, riscos e contraindicações antes de
-                qualquer prescrição.
+                A partir disso, o tratamento é ajustado para você — não copiado
+                de um protocolo padrão.
               </p>
             </div>
           </div>
@@ -87,40 +155,70 @@ export default function MenopausaPage() {
         </div>
       </section>
 
-      {/* Symptoms */}
+      {/* 4 · COMO FUNCIONA */}
       <section className="bg-[#f7e7d6] py-24 md:py-32">
         <div className="wrap">
-          <p className="eyebrow" data-aos="fade-up">
-            Sintomas que tratamos
-          </p>
           <h2
-            className="display mt-6 max-w-2xl text-3xl text-ink md:text-4xl"
+            className="display max-w-2xl text-3xl text-ink md:text-4xl"
             data-aos="fade-up"
-            data-aos-delay="60"
           >
-            Cada sintoma é um sinal que merece investigação
+            Como funciona o acompanhamento
           </h2>
 
-          <ul className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-gold/40 bg-gold/40 sm:grid-cols-2 lg:grid-cols-3">
-            {sintomas.map((s, i) => (
-              <li
-                key={s}
-                className="flex items-center gap-4 bg-cream p-7"
+          <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-gold/40 bg-gold/40 sm:grid-cols-2">
+            {fases.map((f, i) => (
+              <div
+                key={f.n}
+                className="bg-cream p-9 md:p-10"
                 data-aos="fade-up"
-                data-aos-delay={(i % 3) * 70}
+                data-aos-delay={(i % 2) * 80}
               >
-                <span className="text-gold" aria-hidden="true">
-                  ✦
+                <span className="font-display text-3xl italic text-gold">
+                  {f.n}
                 </span>
-                <span className="font-body text-[15px] text-ink-soft">{s}</span>
-              </li>
+                <h3 className="mt-4 font-display text-xl text-ink md:text-2xl">
+                  {f.title}
+                </h3>
+                <p className="mt-4 font-body text-sm leading-relaxed text-ink-soft">
+                  {f.text}
+                </p>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
 
+      {/* 5 · FAQ */}
+      <section className="bg-cream py-24 md:py-32">
+        <div className="wrap">
+          <h2
+            className="display text-3xl text-ink md:text-4xl"
+            data-aos="fade-up"
+          >
+            Dúvidas sobre menopausa e reposição hormonal
+          </h2>
+          <dl className="mt-12 max-w-3xl border-t border-gold/50">
+            {faqLocal.map((f) => (
+              <div
+                key={f.q}
+                className="border-b border-gold/50 py-7"
+                data-aos="fade-up"
+              >
+                <dt className="font-display text-xl text-ink md:text-2xl">
+                  {f.q}
+                </dt>
+                <dd className="mt-3 font-body text-base leading-relaxed text-ink-soft">
+                  {f.a}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
+
+      {/* 6 · CTA FINAL */}
       <CtaBanner
-        title="A menopausa não precisa ser apenas suportada."
+        title="Seus sintomas têm explicação. E têm tratamento."
         message="Olá, Dra. Fabiana. Gostaria de agendar uma consulta sobre menopausa."
       />
     </>

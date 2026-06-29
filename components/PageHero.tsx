@@ -8,6 +8,8 @@ type Props = {
   image?: string;
   imagePosition?: string;
   cta?: string;
+  ctaLabel?: string;
+  seal?: string;
 };
 
 export default function PageHero({
@@ -17,6 +19,8 @@ export default function PageHero({
   image,
   imagePosition = "object-center",
   cta,
+  ctaLabel = "Agendar consulta",
+  seal,
 }: Props) {
   if (image) {
     return (
@@ -63,7 +67,7 @@ export default function PageHero({
               )}
               {cta && (
                 <div
-                  className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center"
+                  className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center"
                   data-aos="fade-up"
                   data-aos-delay="220"
                 >
@@ -73,8 +77,13 @@ export default function PageHero({
                     rel="noopener noreferrer"
                     className="btn-light"
                   >
-                    Agendar consulta
+                    {ctaLabel}
                   </a>
+                  {seal && (
+                    <p className="font-body text-[11px] uppercase tracking-[0.14em] text-cream/50">
+                      {seal}
+                    </p>
+                  )}
                 </div>
               )}
             </div>

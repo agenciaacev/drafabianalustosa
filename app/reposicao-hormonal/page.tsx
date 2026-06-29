@@ -11,72 +11,148 @@ export const metadata: Metadata = {
   alternates: { canonical: "/reposicao-hormonal" },
 };
 
-const sintomas = [
-  "Cansaço persistente sem causa aparente",
-  "Queda de cabelo e unhas frágeis",
-  "Baixa libido e disfunção sexual",
-  "Mau humor, irritabilidade e ansiedade",
-  "Dificuldade de concentração e memória",
-  "Ganho de gordura mesmo com dieta",
-  "Perda de massa muscular",
-  "Pele seca e envelhecimento precoce",
-  "Insônia e sono não reparador",
+const dores = [
+  "Cansaço constante, mesmo dormindo bem",
+  "Queda de libido sem explicação aparente",
+  "Dificuldade para manter massa muscular ou perder gordura",
+  "Humor instável, sem motivo claro",
+  'Já fez exame de rotina e "tudo deu normal"',
 ];
 
-const hormônios = [
+const fases = [
   {
-    title: "Testosterona",
-    text: "Essencial para libido, energia, massa muscular e bem-estar em homens e mulheres. Deficiência causa fadiga, perda de músculo e queda de desempenho físico e cognitivo.",
+    n: "01",
+    title: "Avaliação hormonal completa e histórico de sintomas",
+    text: "Investigamos testosterona, estrogênio, progesterona, hormônios da tireoide, cortisol, DHEA, vitamina D e outros marcadores. Seu histórico clínico entra no diagnóstico antes de qualquer decisão.",
   },
   {
-    title: "Estrogênio e progesterona",
-    text: "Regulam o ciclo, o humor, a qualidade do sono, a composição corporal e a saúde óssea. Desequilíbrios afetam mulheres em qualquer fase da vida, não só na menopausa.",
+    n: "02",
+    title: "Identificação da causa da queda hormonal",
+    text: "Antes de repor, identificamos o que está em queda e por quê. Causas diferentes exigem abordagens diferentes — não existe protocolo único.",
   },
   {
-    title: "Hormônios da tireoide",
-    text: "Hipotireoidismo subclínico é frequentemente subdiagnosticado. Causa cansaço, ganho de peso, queda de cabelo e lentidão metabólica mesmo com exames 'dentro do normal'.",
+    n: "03",
+    title: "Plano de reposição individualizado, com dose ajustada para você",
+    text: "A reposição é prescrita na dose, via e forma adequadas ao seu perfil. Para homens, para mulheres, para cada fase da vida — o plano é construído a partir dos seus exames e objetivos.",
   },
   {
-    title: "Vitamina D e outros",
-    text: "Vitamina D, DHEA, cortisol e hormônio do crescimento também integram o painel. Investigamos o quadro completo — não apenas o que aparece nos exames convencionais.",
+    n: "04",
+    title: "Acompanhamento contínuo com reavaliação periódica",
+    text: "Hormônios mudam com o tempo. Cada retorno inclui reavaliação laboratorial e clínica para ajuste fino do protocolo conforme a resposta do seu corpo.",
+  },
+];
+
+const depoimentos = [
+  {
+    quote:
+      "Gratidão à Dra. por devolver minha auto estima. Ela e sua atendente são super solícitas, esclarecem todas as dúvidas e têm uma atenção ímpar com os pacientes.",
+    name: "Nair Pinheiro",
+    date: "6 meses atrás",
+  },
+  {
+    quote:
+      "Experiência maravilhosa! Médica atenciosa, gentil e muito capacitada. Achei uma Médica pra chamar de \"minha\".",
+    name: "Viena",
+    date: "6 meses atrás",
+  },
+  {
+    quote:
+      "Médica Endocrinologista super competente, estudiosa, atualizada, paciente e comprometida com a saúde e o bem estar de seus pacientes!",
+    name: "Sellene Benevides",
+    date: "6 meses atrás",
   },
 ];
 
 const faqLocal = [
   {
-    q: "Reposição hormonal é só para mulheres na menopausa?",
-    a: "Não. Homens com deficiência de testosterona, mulheres jovens com desequilíbrios hormonais, adultos com hipotireoidismo subclínico ou deficiência de vitamina D — todos podem se beneficiar de avaliação hormonal especializada.",
+    q: "Quem pode fazer reposição hormonal?",
+    a: "Homens e mulheres com queda hormonal confirmada por exame e sintomas associados.",
   },
   {
-    q: "Como saber se tenho desequilíbrio hormonal?",
-    a: "Cansaço persistente, queda de cabelo, ganho de peso sem mudança de hábito, baixa libido e dificuldade de concentração são sinais de alerta. A investigação é feita com exames laboratoriais específicos e avaliação clínica detalhada.",
+    q: "A reposição hormonal é segura a longo prazo?",
+    a: "Quando bem indicada e acompanhada com reavaliação periódica, sim.",
   },
   {
-    q: "A reposição hormonal tem riscos?",
-    a: "Todo tratamento tem riscos e benefícios que precisam ser avaliados individualmente. A reposição hormonal bem indicada, com exames atualizados e acompanhamento regular, é segura para a grande maioria dos pacientes.",
+    q: "Em quanto tempo sinto diferença?",
+    a: "Varia de pessoa para pessoa. O acompanhamento permite ajustar a dose conforme a resposta.",
+  },
+  {
+    q: "Aceita convênio?",
+    a: "Não. Atendimento particular, com recibo para reembolso.",
+  },
+  {
+    q: "Preciso de exames recentes para a primeira consulta?",
+    a: "Ajuda, mas a avaliação inicial já direciona quais exames serão solicitados.",
   },
 ];
+
+function Stars() {
+  return (
+    <span className="text-gold" aria-label="5 estrelas">
+      ★★★★★
+    </span>
+  );
+}
 
 export default function ReposicaoHormonalPage() {
   return (
     <>
+      {/* 1 · HERO */}
       <PageHero
-        eyebrow="Reposição hormonal em Fortaleza"
+        eyebrow="Endocrinologista em Fortaleza · Especialista em reposição hormonal"
         title={
           <>
-            Seus sintomas têm causa.{" "}
-            <span className="italic text-gold">E a causa costuma ser hormonal.</span>
+            Cansaço, queda de libido e falta de disposição não são "coisa da
+            idade".{" "}
+            <span className="italic text-gold">
+              Podem ser hormônio em queda.
+            </span>
           </>
         }
-        subtitle="Cansaço, queda de cabelo, ganho de peso, baixa libido e mau humor não são só 'coisa da idade'. São sinais de que algo hormonal merece investigação."
+        subtitle="Equilíbrio hormonal restaurado com base em exames, não em achismo. Avaliação completa antes de qualquer reposição."
         image="/images/hero.jpg"
         imagePosition="object-right-top"
-        cta="Olá, Dra. Fabiana. Gostaria de agendar uma consulta sobre reposição hormonal."
+        cta="Olá, Dra. Fabiana. Gostaria de agendar uma avaliação hormonal."
+        ctaLabel="Agendar avaliação hormonal"
+        seal="Formada UFC · Residência USP · Mestrado UNIFESP · CRM-CE 6123"
       />
 
-      {/* Intro + photo */}
+      {/* 2 · DOR */}
+      <section className="bg-ink py-24 md:py-32">
+        <div className="wrap">
+          <h2
+            className="display mx-auto max-w-2xl text-center text-3xl text-cream md:text-4xl"
+            data-aos="fade-up"
+          >
+            Se você se identifica com algo aqui,{" "}
+            <span className="italic text-gold">
+              vale investigar seus hormônios.
+            </span>
+          </h2>
+
+          <ul className="mx-auto mt-14 max-w-2xl space-y-4">
+            {dores.map((d, i) => (
+              <li
+                key={i}
+                className="flex items-center gap-5 rounded-xl border border-cream/10 bg-cream/5 px-7 py-5 backdrop-blur-sm"
+                data-aos="fade-up"
+                data-aos-delay={i * 70}
+              >
+                <span className="text-gold text-lg" aria-hidden="true">
+                  ✦
+                </span>
+                <span className="font-body text-base leading-relaxed text-cream/85 md:text-lg">
+                  {d}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* 3 · MECANISMO */}
       <section className="bg-cream py-24 md:py-32">
-        <div className="wrap grid gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
+        <div className="wrap grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:gap-20">
           <div
             className="relative aspect-[3/4] overflow-hidden rounded-2xl"
             data-aos="fade-up"
@@ -91,78 +167,49 @@ export default function ReposicaoHormonalPage() {
           </div>
 
           <div data-aos="fade-up" data-aos-delay="80">
-            <h2 className="display text-3xl text-ink md:text-4xl">
-              Por que investigar hormônios de forma completa
+            <p className="eyebrow">Baseado em exames, não em achismo</p>
+            <h2 className="display mt-6 text-3xl text-ink md:text-4xl">
+              Reposição hormonal não é padrão, é individual
             </h2>
             <div className="mt-7 space-y-5 font-body text-base leading-relaxed text-ink-soft md:text-lg">
               <p>
-                Muitos pacientes chegam com queixas vagas que foram descartadas
-                por exames "normais". O problema está no que foi pedido — ou no
-                que não foi. Valores dentro da faixa de referência não significam
-                níveis adequados para o seu organismo.
+                Cada queda hormonal tem uma causa diferente, e cada corpo
+                responde de um jeito à reposição. Antes de prescrever,
+                avaliamos seu perfil hormonal completo, sua idade, seu histórico
+                de saúde e seus objetivos.
               </p>
-              <p>
-                Investigamos testosterona, estrogênio, progesterona, hormônios
-                da tireoide, cortisol, DHEA, vitamina D e outros marcadores
-                relevantes. Tratamos com base em exames, não em achismo.
-              </p>
+              <p>O plano é construído a partir disso.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Sintomas */}
+      {/* 4 · COMO FUNCIONA */}
       <section className="bg-[#f7e7d6] py-24 md:py-32">
-        <div className="wrap">
-          <p className="eyebrow" data-aos="fade-up">
-            Sinais de alerta
-          </p>
-          <h2
-            className="display mt-6 max-w-2xl text-3xl text-ink md:text-4xl"
-            data-aos="fade-up"
-            data-aos-delay="60"
-          >
-            Sintomas que indicam avaliação hormonal
-          </h2>
-
-          <ul className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-gold/40 bg-gold/40 sm:grid-cols-2 lg:grid-cols-3">
-            {sintomas.map((s, i) => (
-              <li
-                key={s}
-                className="flex items-center gap-4 bg-cream p-7"
-                data-aos="fade-up"
-                data-aos-delay={(i % 3) * 70}
-              >
-                <span className="text-gold" aria-hidden="true">
-                  ✦
-                </span>
-                <span className="font-body text-[15px] text-ink-soft">{s}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      {/* Hormônios que investigamos */}
-      <section className="bg-cream py-24 md:py-32">
         <div className="wrap">
           <h2
             className="display max-w-2xl text-3xl text-ink md:text-4xl"
             data-aos="fade-up"
           >
-            O que investigamos no painel hormonal completo
+            Como funciona o acompanhamento
           </h2>
+
           <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-gold/40 bg-gold/40 sm:grid-cols-2">
-            {hormônios.map((h, i) => (
+            {fases.map((f, i) => (
               <div
-                key={h.title}
+                key={f.n}
                 className="bg-cream p-9 md:p-10"
                 data-aos="fade-up"
                 data-aos-delay={(i % 2) * 80}
               >
-                <h3 className="font-display text-2xl text-ink">{h.title}</h3>
+                <span className="font-display text-3xl italic text-gold">
+                  {f.n}
+                </span>
+                <h3 className="mt-4 font-display text-xl text-ink md:text-2xl">
+                  {f.title}
+                </h3>
                 <p className="mt-4 font-body text-sm leading-relaxed text-ink-soft">
-                  {h.text}
+                  {f.text}
                 </p>
               </div>
             ))}
@@ -170,7 +217,43 @@ export default function ReposicaoHormonalPage() {
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* 5 · PROVA SOCIAL */}
+      <section className="bg-cream py-24 md:py-32">
+        <div className="wrap">
+          <div className="text-center" data-aos="fade-up">
+            <p className="eyebrow mx-auto">Avaliação 5.0 no Google</p>
+            <h2 className="display mt-6 text-3xl text-ink md:text-4xl">
+              O que pacientes dizem
+            </h2>
+          </div>
+
+          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {depoimentos.map((d, i) => (
+              <figure
+                key={i}
+                className="flex flex-col rounded-2xl border border-gold/40 bg-[#fdf4ea] p-8"
+                data-aos="fade-up"
+                data-aos-delay={i * 80}
+              >
+                <Stars />
+                <blockquote className="mt-5 flex-1 font-display text-xl leading-snug text-ink">
+                  "{d.quote}"
+                </blockquote>
+                <figcaption className="mt-6 border-t border-gold/40 pt-5">
+                  <p className="font-body text-sm font-medium text-ink">
+                    {d.name}
+                  </p>
+                  <p className="mt-1 font-body text-xs uppercase tracking-[0.12em] text-taupe">
+                    {d.date}
+                  </p>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 6 · FAQ */}
       <section className="bg-[#f7e7d6] py-24 md:py-32">
         <div className="wrap">
           <h2
@@ -198,9 +281,10 @@ export default function ReposicaoHormonalPage() {
         </div>
       </section>
 
+      {/* 7 · CTA FINAL */}
       <CtaBanner
-        title="Quer entender o que está por trás dos seus sintomas?"
-        message="Olá, Dra. Fabiana. Gostaria de agendar uma consulta sobre reposição hormonal."
+        title="Hormônio em equilíbrio começa com avaliação completa."
+        message="Olá, Dra. Fabiana. Gostaria de agendar uma avaliação hormonal."
       />
     </>
   );

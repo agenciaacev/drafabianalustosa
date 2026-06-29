@@ -1,57 +1,59 @@
 import Image from "next/image";
-import { whatsappLink } from "@/lib/content";
+import { clinic, whatsappLink } from "@/lib/content";
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-screen overflow-hidden">
-      <Image
-        src="/images/hero.jpg"
-        alt="Dra. Fabiana Lustosa, endocrinologista, em seu consultório no Meireles, Fortaleza"
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover object-right-top"
-      />
+    <section className="relative h-screen w-full overflow-hidden">
 
-      <div className="absolute inset-0 z-10 flex items-end overflow-hidden">
-        <div className="wrap pb-10 md:pb-16 2xl:pb-28">
-          <div className="max-w-2xl">
+      {/* Mobile: imagem como fundo com overlay cream */}
+      <div className="absolute inset-0 lg:hidden">
+        <Image
+          src="/images/hero2.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-top"
+        />
+        <div className="absolute inset-0 bg-cream/88" />
+      </div>
+
+      <div className="relative flex h-full w-full">
+
+        {/* ── Painel esquerdo · texto ── */}
+        <div className="flex w-full flex-col justify-between bg-transparent px-6 py-24 sm:px-10 lg:w-[46%] lg:bg-cream lg:px-16 xl:px-20 2xl:px-28">
+
+          {/* Conteúdo principal */}
+          <div className="flex flex-col justify-center flex-1">
             <p
-              className="eyebrow !text-white"
+              className="eyebrow"
               data-aos="fade-up"
-              style={{ textShadow: "0 1px 6px rgba(0,0,0,0.35)" }}
             >
               Endocrinologista em Fortaleza
             </p>
 
             <h1
-              className="display mt-4 text-ink"
+              className="display mt-5 text-ink"
               data-aos="fade-up"
               data-aos-delay="80"
-              style={{
-                fontSize: "clamp(2rem, 4vw, 4.6rem)",
-                textShadow: "0 2px 12px rgba(0,0,0,0.3)",
-              }}
+              style={{ fontSize: "clamp(2rem, 3.2vw, 4rem)" }}
             >
               Você não fracassou
               <br />
               na dieta.
               <span
-                className="mt-1 block italic text-white"
-                style={{ fontSize: "clamp(1.5rem, 4vw, 4.6rem)" }}
+                className="mt-1 block italic text-taupe"
+                style={{ fontSize: "clamp(1.6rem, 3.2vw, 4rem)" }}
               >
                 O seu metabolismo nunca foi investigado de verdade.
               </span>
             </h1>
 
             <p
-              className="mt-4 max-w-xl font-body leading-relaxed text-ink"
+              className="mt-5 max-w-md font-body leading-relaxed text-ink-soft"
               data-aos="fade-up"
               data-aos-delay="160"
-              style={{
-                fontSize: "clamp(0.875rem, 1.1vw, 1.125rem)",
-                textShadow: "0 1px 6px rgba(0,0,0,0.3)",
-              }}
+              style={{ fontSize: "clamp(0.875rem, 1vw, 1.05rem)" }}
             >
               Especialista em emagrecimento, diabetes, menopausa e reposição
               hormonal. Formada UFC · Residência USP · Mestrado UNIFESP ·
@@ -59,7 +61,7 @@ export default function Hero() {
             </p>
 
             <div
-              className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center 2xl:mt-10"
+              className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center"
               data-aos="fade-up"
               data-aos-delay="220"
             >
@@ -78,7 +80,32 @@ export default function Hero() {
               </a>
             </div>
           </div>
+
+          {/* Credenciais no rodapé do painel */}
+          <div
+            className="flex gap-8 font-body text-[11px] uppercase tracking-[0.16em] text-ink/35"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <span>{clinic.crm}</span>
+            <span>Fortaleza — CE</span>
+          </div>
         </div>
+
+        {/* ── Painel direito · foto (desktop) ── */}
+        <div className="relative hidden h-full bg-cream lg:block lg:w-[54%]">
+          <Image
+            src="/images/hero2.png"
+            alt="Dra. Fabiana Lustosa, endocrinologista em Fortaleza"
+            fill
+            priority
+            sizes="54vw"
+            className="object-contain object-bottom"
+          />
+          {/* Gradiente de transição cream → transparente */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-36 bg-gradient-to-r from-cream to-transparent" />
+        </div>
+
       </div>
     </section>
   );

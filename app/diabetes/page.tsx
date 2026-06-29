@@ -11,93 +11,158 @@ export const metadata: Metadata = {
   alternates: { canonical: "/diabetes" },
 };
 
-const marcadores = [
-  "Glicemia de jejum e pós-prandial",
-  "Hemoglobina glicada (HbA1c)",
-  "Insulina de jejum e HOMA-IR",
-  "Peptídeo C e função pancreática",
-  "Função renal (creatinina, TFG)",
-  "Perfil lipídico completo",
-  "Microalbuminúria",
-  "Risco cardiovascular global",
+const dores = [
+  "Glicemia que varia mesmo com dieta e remédio em dia",
+  "Hemoglobina glicada alta sem entender o motivo",
+  "Medo de complicação no futuro, mesmo \"controlado\"",
+  "Pré-diabetes diagnosticado e nenhuma orientação clara do que fazer",
+  "Trocou de remédio várias vezes sem melhora real",
 ];
 
 const fases = [
   {
-    title: "Avaliação completa",
-    text: "Glicemia, HbA1c, insulina de jejum, função renal, perfil lipídico e risco cardiovascular. Identificamos o quadro real e as comorbidades associadas antes de qualquer conduta.",
+    n: "01",
+    title: "Avaliação completa do quadro metabólico e histórico de medicação",
+    text: "Glicemia, HbA1c, insulina de jejum, função renal, perfil lipídico e risco cardiovascular. Revisamos também toda a história de medicações anteriores antes de qualquer conduta.",
   },
   {
-    title: "Plano individualizado",
-    text: "Medicação ajustada ao seu perfil metabólico, orientação alimentar em parceria com nutricionista e estratégias práticas para controle glicêmico no dia a dia.",
+    n: "02",
+    title: "Identificação do que está impedindo o controle real",
+    text: "Nem toda glicemia descontrolada tem a mesma causa. Identificamos resistência à insulina, falha no protocolo atual, fatores alimentares e hormonais associados.",
   },
   {
-    title: "Acompanhamento contínuo",
-    text: "Reavaliação periódica com novos exames, ajuste de doses e monitoramento de complicações. O objetivo é manter HbA1c em meta e reduzir risco cardiovascular de forma sustentada.",
+    n: "03",
+    title: "Ajuste de medicação e plano alimentar individualizado",
+    text: "Medicação ajustada ao seu perfil metabólico — não ao padrão genérico. Quando necessário, incluímos medicamentos modernos como os GLP-1, com protocolo individualizado.",
+  },
+  {
+    n: "04",
+    title: "Acompanhamento contínuo com reavaliação de exames",
+    text: "Cada retorno inclui reavaliação laboratorial: HbA1c, função renal, perfil lipídico. O objetivo é manter o controle de longo prazo e prevenir complicações cardiovasculares e renais.",
+  },
+];
+
+const depoimentos = [
+  {
+    quote:
+      "A Dra. Fabiana Lustosa é uma excelente profissional, muito competente e atenciosa. Saí do consultório muito feliz, superou as minhas expectativas, super indico.",
+    name: "Débora Costa",
+    date: "4 meses atrás",
+  },
+  {
+    quote:
+      "Médica Endocrinologista super competente, estudiosa, atualizada, paciente e comprometida com a saúde e o bem estar de seus pacientes!",
+    name: "Sellene Benevides",
+    date: "6 meses atrás",
+  },
+  {
+    quote:
+      "Primeira consulta c a Dra. Fabiana e foi incrível, médica que escuta e domina do assunto.",
+    name: "Alanna Neumann",
+    date: "15 horas atrás",
   },
 ];
 
 const faqLocal = [
   {
-    q: "Qual médico tratar diabetes em Fortaleza?",
-    a: "O endocrinologista é o especialista em diabetes e metabolismo. A Dra. Fabiana Lustosa atende em Fortaleza com avaliação completa de glicemia, HbA1c, função renal e risco cardiovascular.",
+    q: "Tenho pré-diabetes, preciso de acompanhamento mesmo sem remédio?",
+    a: "Sim. Essa é a fase em que ainda dá para evitar a evolução para diabetes com mudanças orientadas.",
   },
   {
-    q: "Pré-diabetes tem tratamento?",
-    a: "Sim. O pré-diabetes é reversível com intervenção adequada: ajuste alimentar, atividade física e, em alguns casos, medicação. A detecção precoce é essencial para evitar a progressão para diabetes tipo 2.",
+    q: "Vou precisar trocar minha medicação?",
+    a: "Depende do seu controle atual. O ajuste é feito a partir dos seus exames, não por padrão.",
   },
   {
-    q: "Com que frequência devo consultar o endocrinologista para diabetes?",
-    a: "Em geral, a cada 3 a 6 meses, dependendo do controle glicêmico e das medicações em uso. Em casos de ajuste de tratamento, o acompanhamento pode ser mais frequente.",
+    q: "Com que frequência preciso repetir exames?",
+    a: "Varia conforme seu quadro, mas o acompanhamento inclui reavaliação periódica da hemoglobina glicada e função renal.",
+  },
+  {
+    q: "Aceita convênio?",
+    a: "Não. Atendimento particular, com recibo para reembolso.",
+  },
+  {
+    q: "O diabetes tem cura?",
+    a: "Não, mas tem controle real, capaz de evitar complicações e manter qualidade de vida.",
   },
 ];
+
+function Stars() {
+  return (
+    <span className="text-gold" aria-label="5 estrelas">
+      ★★★★★
+    </span>
+  );
+}
 
 export default function DiabetesPage() {
   return (
     <>
+      {/* 1 · HERO */}
       <PageHero
-        eyebrow="Controle do diabetes em Fortaleza"
+        eyebrow="Endocrinologista em Fortaleza · Especialista em diabetes"
         title={
           <>
-            Diabetes não é uma sentença.{" "}
-            <span className="italic text-gold">É uma condição que tem controle.</span>
+            Sua glicemia oscila mesmo seguindo a dieta certa e tomando o
+            remédio certo.{" "}
+            <span className="italic text-gold">
+              O problema é o plano, não você.
+            </span>
           </>
         }
-        subtitle="Com investigação metabólica completa e acompanhamento especializado, é possível controlar a glicemia, reduzir a HbA1c e proteger sua saúde cardiovascular de verdade."
+        subtitle="Controle real da glicemia, da hemoglobina glicada e do risco cardiovascular, com ajuste individualizado de medicação e acompanhamento contínuo."
         image="/images/portrait-couch.jpg"
-        cta="Olá, Dra. Fabiana. Gostaria de agendar uma consulta sobre diabetes."
+        cta="Olá, Dra. Fabiana. Gostaria de agendar uma avaliação do diabetes."
+        ctaLabel="Agendar avaliação do diabetes"
+        seal="Formada UFC · Residência USP · Mestrado UNIFESP · CRM-CE 6123"
       />
 
-      {/* Intro + photo */}
+      {/* 2 · DOR */}
+      <section className="bg-ink py-24 md:py-32">
+        <div className="wrap">
+          <h2
+            className="display mx-auto max-w-2xl text-center text-3xl text-cream md:text-4xl"
+            data-aos="fade-up"
+          >
+            Se você se identifica com algo aqui,{" "}
+            <span className="italic text-gold">
+              o controle pode estar incompleto.
+            </span>
+          </h2>
+
+          <ul className="mx-auto mt-14 max-w-2xl space-y-4">
+            {dores.map((d, i) => (
+              <li
+                key={i}
+                className="flex items-center gap-5 rounded-xl border border-cream/10 bg-cream/5 px-7 py-5 backdrop-blur-sm"
+                data-aos="fade-up"
+                data-aos-delay={i * 70}
+              >
+                <span className="text-gold text-lg" aria-hidden="true">
+                  ✦
+                </span>
+                <span className="font-body text-base leading-relaxed text-cream/85 md:text-lg">
+                  {d}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* 3 · MECANISMO */}
       <section className="bg-cream py-24 md:py-32">
         <div className="wrap grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:gap-20">
           <div data-aos="fade-up">
-            <div className="space-y-5 font-body text-base leading-relaxed text-ink-soft md:text-lg">
+            <p className="eyebrow">Além do número no glicosímetro</p>
+            <h2 className="display mt-6 text-3xl text-ink md:text-4xl">
+              Controle de diabetes não é só baixar a glicemia do dia
+            </h2>
+            <div className="mt-7 space-y-5 font-body text-base leading-relaxed text-ink-soft md:text-lg">
               <p>
-                Diabetes tipo 2 se desenvolve ao longo de anos de resistência à
-                insulina não tratada. Quando diagnosticado, já existe um
-                comprometimento metabólico que precisa ser avaliado em
-                profundidade — não apenas com controle glicêmico, mas com
-                atenção ao risco cardiovascular, à função renal e ao padrão
-                hormonal como um todo.
-              </p>
-              <p>
-                O pré-diabetes, muitas vezes ignorado, é a janela de
-                oportunidade para reverter o processo antes que se instale a
-                doença. Investigamos e tratamos os dois.
-              </p>
-            </div>
-
-            <div className="mt-12 rounded-2xl bg-[#f7e7d6] p-9 md:p-11">
-              <h2 className="display text-2xl text-ink md:text-3xl">
-                Diabetes tipo 1 e tipo 2
-              </h2>
-              <p className="mt-5 font-body text-base leading-relaxed text-ink-soft">
-                O tipo 1 é autoimune e exige insulinoterapia desde o início. O
-                tipo 2 resulta de resistência à insulina progressiva e, com
-                acompanhamento especializado, pode ser controlado com
-                medicamentos orais, injetáveis modernos (como GLP-1) ou
-                insulina, sempre com protocolo individualizado.
+                O foco vai além do número no glicosímetro. Avaliamos hemoglobina
+                glicada, função renal, perfil lipídico e risco cardiovascular
+                para montar um plano que protege você a longo prazo, não só no
+                momento da consulta.
               </p>
             </div>
           </div>
@@ -118,59 +183,28 @@ export default function DiabetesPage() {
         </div>
       </section>
 
-      {/* O que avaliamos */}
+      {/* 4 · COMO FUNCIONA */}
       <section className="bg-[#f7e7d6] py-24 md:py-32">
-        <div className="wrap">
-          <p className="eyebrow" data-aos="fade-up">
-            Investigação completa
-          </p>
-          <h2
-            className="display mt-6 max-w-2xl text-3xl text-ink md:text-4xl"
-            data-aos="fade-up"
-            data-aos-delay="60"
-          >
-            O que avaliamos além da glicemia
-          </h2>
-
-          <ul className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-gold/40 bg-gold/40 sm:grid-cols-2 lg:grid-cols-4">
-            {marcadores.map((m, i) => (
-              <li
-                key={m}
-                className="flex items-center gap-4 bg-cream p-7"
-                data-aos="fade-up"
-                data-aos-delay={(i % 4) * 60}
-              >
-                <span className="text-gold" aria-hidden="true">
-                  ✦
-                </span>
-                <span className="font-body text-[15px] text-ink-soft">{m}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      {/* Como funciona */}
-      <section className="bg-cream py-24 md:py-32">
         <div className="wrap">
           <h2
             className="display max-w-2xl text-3xl text-ink md:text-4xl"
             data-aos="fade-up"
           >
-            Como funciona o acompanhamento de diabetes aqui
+            Como funciona o acompanhamento
           </h2>
-          <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-gold/40 bg-gold/40 md:grid-cols-3">
+
+          <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-gold/40 bg-gold/40 sm:grid-cols-2">
             {fases.map((f, i) => (
               <div
-                key={f.title}
+                key={f.n}
                 className="bg-cream p-9 md:p-10"
                 data-aos="fade-up"
-                data-aos-delay={i * 80}
+                data-aos-delay={(i % 2) * 80}
               >
                 <span className="font-display text-3xl italic text-gold">
-                  0{i + 1}
+                  {f.n}
                 </span>
-                <h3 className="mt-4 font-display text-2xl text-ink">
+                <h3 className="mt-4 font-display text-xl text-ink md:text-2xl">
                   {f.title}
                 </h3>
                 <p className="mt-4 font-body text-sm leading-relaxed text-ink-soft">
@@ -182,7 +216,43 @@ export default function DiabetesPage() {
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* 5 · PROVA SOCIAL */}
+      <section className="bg-cream py-24 md:py-32">
+        <div className="wrap">
+          <div className="text-center" data-aos="fade-up">
+            <p className="eyebrow mx-auto">Avaliação 5.0 no Google</p>
+            <h2 className="display mt-6 text-3xl text-ink md:text-4xl">
+              O que pacientes dizem
+            </h2>
+          </div>
+
+          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {depoimentos.map((d, i) => (
+              <figure
+                key={i}
+                className="flex flex-col rounded-2xl border border-gold/40 bg-[#fdf4ea] p-8"
+                data-aos="fade-up"
+                data-aos-delay={i * 80}
+              >
+                <Stars />
+                <blockquote className="mt-5 flex-1 font-display text-xl leading-snug text-ink">
+                  "{d.quote}"
+                </blockquote>
+                <figcaption className="mt-6 border-t border-gold/40 pt-5">
+                  <p className="font-body text-sm font-medium text-ink">
+                    {d.name}
+                  </p>
+                  <p className="mt-1 font-body text-xs uppercase tracking-[0.12em] text-taupe">
+                    {d.date}
+                  </p>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 6 · FAQ */}
       <section className="bg-[#f7e7d6] py-24 md:py-32">
         <div className="wrap">
           <h2
@@ -210,9 +280,10 @@ export default function DiabetesPage() {
         </div>
       </section>
 
+      {/* 7 · CTA FINAL */}
       <CtaBanner
-        title="Quer controle real da glicemia com acompanhamento especializado?"
-        message="Olá, Dra. Fabiana. Gostaria de agendar uma consulta sobre diabetes."
+        title="Controle de verdade começa com avaliação completa."
+        message="Olá, Dra. Fabiana. Gostaria de agendar uma avaliação do diabetes."
       />
     </>
   );
