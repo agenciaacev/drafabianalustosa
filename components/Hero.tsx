@@ -21,7 +21,7 @@ export default function Hero() {
       <div className="relative flex h-full w-full">
 
         {/* ── Painel esquerdo · texto ── */}
-        <div className="flex w-full flex-col justify-between bg-transparent px-6 py-24 sm:px-10 lg:w-[46%] lg:bg-cream lg:px-16 xl:px-20 2xl:px-28">
+        <div className="flex w-full flex-col justify-between bg-transparent px-6 py-24 sm:px-10 lg:w-1/2 lg:bg-cream lg:px-16 xl:px-20 2xl:px-28">
 
           {/* Conteúdo principal */}
           <div className="flex flex-col justify-center flex-1">
@@ -93,17 +93,17 @@ export default function Hero() {
         </div>
 
         {/* ── Painel direito · foto (desktop) ── */}
-        <div className="relative hidden h-full bg-cream lg:block lg:w-[54%]">
+        <div className="relative hidden h-full overflow-hidden lg:block lg:w-1/2">
           <Image
             src="/images/hero2.png"
             alt="Dra. Fabiana Lustosa, endocrinologista em Fortaleza"
             fill
             priority
-            sizes="54vw"
-            className="object-contain object-bottom"
+            sizes="50vw"
+            className="object-cover object-[center_15%]"
           />
-          {/* Gradiente de transição cream → transparente */}
-          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-36 bg-gradient-to-r from-cream to-transparent" />
+          {/* Gradiente largo cream → transparente na borda esquerda */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-[35%] bg-gradient-to-r from-cream to-transparent" />
         </div>
 
       </div>
