@@ -3,6 +3,7 @@ import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import CtaBanner from "@/components/CtaBanner";
 import Testimonials from "@/components/Testimonials";
+import { whatsappLink } from "@/lib/content";
 
 export const metadata: Metadata = {
   title:
@@ -116,6 +117,11 @@ export default function LongevidadePage() {
               </li>
             ))}
           </ul>
+          <div className="mt-10 flex justify-center" data-aos="fade-up">
+            <a href={whatsappLink("Olá, Dra. Fabiana. Gostaria de agendar uma avaliação preventiva de longevidade.")} target="_blank" rel="noopener noreferrer" className="btn-light">
+              Agendar consulta
+            </a>
+          </div>
         </div>
       </section>
 
@@ -142,7 +148,7 @@ export default function LongevidadePage() {
           </div>
 
           <div
-            className="relative overflow-hidden rounded-2xl"
+            className="relative min-h-72 lg:min-h-0 overflow-hidden rounded-2xl"
             data-aos="fade-up"
             data-aos-delay="80"
           >
@@ -187,6 +193,11 @@ export default function LongevidadePage() {
               </div>
             ))}
           </div>
+          <div className="mt-10 flex justify-center" data-aos="fade-up">
+            <a href={whatsappLink("Olá, Dra. Fabiana. Gostaria de agendar uma avaliação preventiva de longevidade.")} target="_blank" rel="noopener noreferrer" className="btn-primary">
+              Agendar consulta
+            </a>
+          </div>
         </div>
       </section>
 
@@ -218,6 +229,11 @@ export default function LongevidadePage() {
               </div>
             ))}
           </dl>
+          <div className="mt-10 flex justify-center" data-aos="fade-up">
+            <a href={whatsappLink("Olá, Dra. Fabiana. Gostaria de agendar uma avaliação preventiva de longevidade.")} target="_blank" rel="noopener noreferrer" className="btn-primary">
+              Agendar consulta
+            </a>
+          </div>
         </div>
       </section>
 

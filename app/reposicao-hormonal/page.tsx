@@ -3,6 +3,7 @@ import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import CtaBanner from "@/components/CtaBanner";
 import Testimonials from "@/components/Testimonials";
+import { whatsappLink } from "@/lib/content";
 
 export const metadata: Metadata = {
   title:
@@ -119,6 +120,11 @@ export default function ReposicaoHormonalPage() {
               </li>
             ))}
           </ul>
+          <div className="mt-10 flex justify-center" data-aos="fade-up">
+            <a href={whatsappLink("Olá, Dra. Fabiana. Gostaria de agendar uma avaliação hormonal.")} target="_blank" rel="noopener noreferrer" className="btn-light">
+              Agendar consulta
+            </a>
+          </div>
         </div>
       </section>
 
@@ -126,7 +132,7 @@ export default function ReposicaoHormonalPage() {
       <section className="bg-cream py-24 md:py-32">
         <div className="wrap grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:gap-20">
           <div
-            className="relative overflow-hidden rounded-2xl"
+            className="relative min-h-72 lg:min-h-0 overflow-hidden rounded-2xl"
             data-aos="fade-up"
           >
             <Image
@@ -186,6 +192,11 @@ export default function ReposicaoHormonalPage() {
               </div>
             ))}
           </div>
+          <div className="mt-10 flex justify-center" data-aos="fade-up">
+            <a href={whatsappLink("Olá, Dra. Fabiana. Gostaria de agendar uma avaliação hormonal.")} target="_blank" rel="noopener noreferrer" className="btn-primary">
+              Agendar consulta
+            </a>
+          </div>
         </div>
       </section>
 
@@ -217,6 +228,11 @@ export default function ReposicaoHormonalPage() {
               </div>
             ))}
           </dl>
+          <div className="mt-10 flex justify-center" data-aos="fade-up">
+            <a href={whatsappLink("Olá, Dra. Fabiana. Gostaria de agendar uma avaliação hormonal.")} target="_blank" rel="noopener noreferrer" className="btn-primary">
+              Agendar consulta
+            </a>
+          </div>
         </div>
       </section>
 

@@ -4,6 +4,7 @@ import PageHero from "@/components/PageHero";
 import CtaBanner from "@/components/CtaBanner";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import Testimonials from "@/components/Testimonials";
+import { whatsappLink } from "@/lib/content";
 
 export const metadata: Metadata = {
   title:
@@ -88,7 +89,7 @@ export default function EmagrecimentoPage() {
       {/* Why */}
       <section className="bg-cream py-24 md:py-32">
         <div className="wrap grid gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
-          <div className="relative overflow-hidden rounded-2xl" data-aos="fade-up">
+          <div className="relative min-h-72 lg:min-h-0 overflow-hidden rounded-2xl" data-aos="fade-up">
             <Image
               src="/images/emagrecimento.png"
               alt="Emagrecimento com acompanhamento endocrinológico em Fortaleza"
@@ -148,6 +149,11 @@ export default function EmagrecimentoPage() {
             ))}
           </div>
         </div>
+          <div className="mt-10 flex justify-center" data-aos="fade-up">
+            <a href={whatsappLink("Olá, Dra. Fabiana. Gostaria de agendar uma consulta sobre emagrecimento.")} target="_blank" rel="noopener noreferrer" className="btn-primary">
+              Agendar consulta
+            </a>
+          </div>
       </section>
 
       {/* Semaglutida */}
@@ -209,6 +215,11 @@ export default function EmagrecimentoPage() {
             ))}
           </div>
         </div>
+          <div className="mt-10 flex justify-center" data-aos="fade-up">
+            <a href={whatsappLink("Olá, Dra. Fabiana. Gostaria de agendar uma consulta sobre emagrecimento.")} target="_blank" rel="noopener noreferrer" className="btn-primary">
+              Agendar consulta
+            </a>
+          </div>
       </section>
 
       {/* Depoimentos */}
@@ -236,6 +247,11 @@ export default function EmagrecimentoPage() {
               </div>
             ))}
           </dl>
+          <div className="mt-10 flex justify-center" data-aos="fade-up">
+            <a href={whatsappLink("Olá, Dra. Fabiana. Gostaria de agendar uma consulta sobre emagrecimento.")} target="_blank" rel="noopener noreferrer" className="btn-primary">
+              Agendar consulta
+            </a>
+          </div>
         </div>
       </section>
 
