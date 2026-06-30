@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import CtaBanner from "@/components/CtaBanner";
+import Testimonials from "@/components/Testimonials";
 
 export const metadata: Metadata = {
   title:
@@ -42,27 +43,6 @@ const fases = [
   },
 ];
 
-const depoimentos = [
-  {
-    quote:
-      "A Dra. Fabiana e sua atendente são super solícitas, esclarecem todas as dúvidas e têm uma atenção ímpar com os pacientes. Gratidão à Dra. por devolver minha auto estima.",
-    name: "Nair Pinheiro",
-    date: "6 meses atrás",
-  },
-  {
-    quote:
-      "Muito estudiosa, inteligente, comprometida e séria.",
-    name: "Leave'n Live Free",
-    date: "3 semanas atrás",
-  },
-  {
-    quote:
-      "Atendimento impecável, clínica muito organizada. Agora não quero outra endócrino!!!",
-    name: "Eduarda Paiva",
-    date: "1 mês atrás",
-  },
-];
-
 const faqLocal = [
   {
     q: "Para quem é indicada a avaliação de longevidade?",
@@ -85,14 +65,6 @@ const faqLocal = [
     a: "Sim, ajuda a identificar desequilíbrios associados que podem estar agravando seu quadro.",
   },
 ];
-
-function Stars() {
-  return (
-    <span className="text-gold" aria-label="5 estrelas">
-      ★★★★★
-    </span>
-  );
-}
 
 export default function LongevidadePage() {
   return (
@@ -170,16 +142,16 @@ export default function LongevidadePage() {
           </div>
 
           <div
-            className="relative aspect-[3/4] overflow-hidden rounded-2xl"
+            className="relative overflow-hidden rounded-2xl"
             data-aos="fade-up"
             data-aos-delay="80"
           >
             <Image
-              src="/images/portrait-couch.jpg"
-              alt="Dra. Fabiana Lustosa, medicina de longevidade em Fortaleza"
+              src="/images/logenvidade.png"
+              alt="Longevidade saudável em Fortaleza"
               fill
               sizes="(max-width: 1024px) 100vw, 45vw"
-              className="object-cover"
+              className="object-cover object-top"
             />
           </div>
         </div>
@@ -218,41 +190,8 @@ export default function LongevidadePage() {
         </div>
       </section>
 
-      {/* 5 · PROVA SOCIAL */}
-      <section className="bg-cream py-24 md:py-32">
-        <div className="wrap">
-          <div className="text-center" data-aos="fade-up">
-            <p className="eyebrow mx-auto">Avaliação 5.0 no Google</p>
-            <h2 className="display mt-6 text-3xl text-ink md:text-4xl">
-              O que pacientes dizem
-            </h2>
-          </div>
-
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {depoimentos.map((d, i) => (
-              <figure
-                key={i}
-                className="flex flex-col rounded-2xl border border-gold/40 bg-[#fdf4ea] p-8"
-                data-aos="fade-up"
-                data-aos-delay={i * 80}
-              >
-                <Stars />
-                <blockquote className="mt-5 flex-1 font-display text-xl leading-snug text-ink">
-                  "{d.quote}"
-                </blockquote>
-                <figcaption className="mt-6 border-t border-gold/40 pt-5">
-                  <p className="font-body text-sm font-medium text-ink">
-                    {d.name}
-                  </p>
-                  <p className="mt-1 font-body text-xs uppercase tracking-[0.12em] text-taupe">
-                    {d.date}
-                  </p>
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* 5 · DEPOIMENTOS */}
+      <Testimonials />
 
       {/* 6 · FAQ */}
       <section className="bg-[#f7e7d6] py-24 md:py-32">

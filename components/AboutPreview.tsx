@@ -17,7 +17,7 @@ export default function AboutPreview() {
           <div className="relative" data-aos="fade-up">
             <div className="relative aspect-[3/4] overflow-hidden rounded-2xl">
               <Image
-                src="/images/portrait-couch.jpg"
+                src="/images/hero2.webp"
                 alt="Dra. Fabiana Lustosa, endocrinologista em Fortaleza"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"

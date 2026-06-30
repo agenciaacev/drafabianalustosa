@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import CtaBanner from "@/components/CtaBanner";
+import Testimonials from "@/components/Testimonials";
 
 export const metadata: Metadata = {
   title:
@@ -140,13 +141,13 @@ export default function MenopausaPage() {
           </div>
 
           <div
-            className="relative aspect-[3/4] overflow-hidden rounded-2xl"
+            className="relative overflow-hidden rounded-2xl"
             data-aos="fade-up"
             data-aos-delay="80"
           >
             <Image
-              src="/images/portrait-couch.jpg"
-              alt="Dra. Fabiana Lustosa, especialista em menopausa em Fortaleza"
+              src="/images/menopausa.png"
+              alt="Tratamento de menopausa e reposição hormonal em Fortaleza"
               fill
               sizes="(max-width: 1024px) 100vw, 45vw"
               className="object-cover"
@@ -188,7 +189,10 @@ export default function MenopausaPage() {
         </div>
       </section>
 
-      {/* 5 · FAQ */}
+      {/* 5 · DEPOIMENTOS */}
+      <Testimonials />
+
+      {/* 6 · FAQ */}
       <section className="bg-cream py-24 md:py-32">
         <div className="wrap">
           <h2

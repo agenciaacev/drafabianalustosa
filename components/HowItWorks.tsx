@@ -10,11 +10,11 @@ export default function HowItWorks() {
           <div className="lg:sticky lg:top-28 lg:self-start" data-aos="fade-up">
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl">
               <Image
-                src="/images/standing.jpg"
+                src="/images/portrait-couch.jpg"
                 alt="Dra. Fabiana Lustosa em seu consultório"
                 fill
                 sizes="(max-width: 1024px) 100vw, 45vw"
-                className="object-cover object-[30%_center]"
+                className="object-cover object-top"
               />
             </div>
             <div className="mt-8 max-w-sm">

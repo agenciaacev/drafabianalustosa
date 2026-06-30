@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import CtaBanner from "@/components/CtaBanner";
+import Testimonials from "@/components/Testimonials";
 
 export const metadata: Metadata = {
   title:
@@ -42,27 +43,6 @@ const fases = [
   },
 ];
 
-const depoimentos = [
-  {
-    quote:
-      "Gratidão à Dra. por devolver minha auto estima. Ela e sua atendente são super solícitas, esclarecem todas as dúvidas e têm uma atenção ímpar com os pacientes.",
-    name: "Nair Pinheiro",
-    date: "6 meses atrás",
-  },
-  {
-    quote:
-      "Experiência maravilhosa! Médica atenciosa, gentil e muito capacitada. Achei uma Médica pra chamar de \"minha\".",
-    name: "Viena",
-    date: "6 meses atrás",
-  },
-  {
-    quote:
-      "Médica Endocrinologista super competente, estudiosa, atualizada, paciente e comprometida com a saúde e o bem estar de seus pacientes!",
-    name: "Sellene Benevides",
-    date: "6 meses atrás",
-  },
-];
-
 const faqLocal = [
   {
     q: "Quem pode fazer reposição hormonal?",
@@ -85,14 +65,6 @@ const faqLocal = [
     a: "Ajuda, mas a avaliação inicial já direciona quais exames serão solicitados.",
   },
 ];
-
-function Stars() {
-  return (
-    <span className="text-gold" aria-label="5 estrelas">
-      ★★★★★
-    </span>
-  );
-}
 
 export default function ReposicaoHormonalPage() {
   return (
@@ -154,12 +126,12 @@ export default function ReposicaoHormonalPage() {
       <section className="bg-cream py-24 md:py-32">
         <div className="wrap grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:gap-20">
           <div
-            className="relative aspect-[3/4] overflow-hidden rounded-2xl"
+            className="relative overflow-hidden rounded-2xl"
             data-aos="fade-up"
           >
             <Image
-              src="/images/standing.jpg"
-              alt="Dra. Fabiana Lustosa, especialista em reposição hormonal em Fortaleza"
+              src="/images/reposicao-hormonal.png"
+              alt="Reposição hormonal em Fortaleza"
               fill
               sizes="(max-width: 1024px) 100vw, 45vw"
               className="object-cover object-[30%_center]"
@@ -217,41 +189,8 @@ export default function ReposicaoHormonalPage() {
         </div>
       </section>
 
-      {/* 5 · PROVA SOCIAL */}
-      <section className="bg-cream py-24 md:py-32">
-        <div className="wrap">
-          <div className="text-center" data-aos="fade-up">
-            <p className="eyebrow mx-auto">Avaliação 5.0 no Google</p>
-            <h2 className="display mt-6 text-3xl text-ink md:text-4xl">
-              O que pacientes dizem
-            </h2>
-          </div>
-
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {depoimentos.map((d, i) => (
-              <figure
-                key={i}
-                className="flex flex-col rounded-2xl border border-gold/40 bg-[#fdf4ea] p-8"
-                data-aos="fade-up"
-                data-aos-delay={i * 80}
-              >
-                <Stars />
-                <blockquote className="mt-5 flex-1 font-display text-xl leading-snug text-ink">
-                  "{d.quote}"
-                </blockquote>
-                <figcaption className="mt-6 border-t border-gold/40 pt-5">
-                  <p className="font-body text-sm font-medium text-ink">
-                    {d.name}
-                  </p>
-                  <p className="mt-1 font-body text-xs uppercase tracking-[0.12em] text-taupe">
-                    {d.date}
-                  </p>
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* 5 · DEPOIMENTOS */}
+      <Testimonials />
 
       {/* 6 · FAQ */}
       <section className="bg-[#f7e7d6] py-24 md:py-32">

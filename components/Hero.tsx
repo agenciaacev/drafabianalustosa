@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { clinic, whatsappLink } from "@/lib/content";
 
 export default function Hero() {
@@ -21,6 +20,11 @@ export default function Hero() {
             alt="Dra. Fabiana Lustosa, endocrinologista em Fortaleza"
             className="hidden lg:block w-full h-auto lg:absolute lg:inset-0 lg:h-full lg:object-cover"
             style={{ objectPosition: "50% 15%" }}
+          />
+          {/* Gradiente top desktop — cobre a navbar */}
+          <div
+            className="hidden lg:block absolute top-0 inset-x-0 h-24 pointer-events-none"
+            style={{ background: "linear-gradient(to bottom, #fcefe1, transparent)" }}
           />
           {/* Gradiente lateral esquerda (desktop) */}
           <div

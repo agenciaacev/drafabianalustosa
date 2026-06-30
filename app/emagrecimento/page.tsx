@@ -3,6 +3,7 @@ import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import CtaBanner from "@/components/CtaBanner";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
+import Testimonials from "@/components/Testimonials";
 
 export const metadata: Metadata = {
   title:
@@ -87,13 +88,13 @@ export default function EmagrecimentoPage() {
       {/* Why */}
       <section className="bg-cream py-24 md:py-32">
         <div className="wrap grid gap-12 lg:grid-cols-[1fr_1fr] lg:gap-20">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-2xl" data-aos="fade-up">
+          <div className="relative overflow-hidden rounded-2xl" data-aos="fade-up">
             <Image
-              src="/images/standing.jpg"
-              alt="Dra. Fabiana Lustosa, especialista em emagrecimento em Fortaleza"
+              src="/images/emagrecimento.png"
+              alt="Emagrecimento com acompanhamento endocrinológico em Fortaleza"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover object-[30%_center]"
+              className="object-cover object-top"
             />
           </div>
           <div data-aos="fade-up" data-aos-delay="80">
@@ -209,6 +210,9 @@ export default function EmagrecimentoPage() {
           </div>
         </div>
       </section>
+
+      {/* Depoimentos */}
+      <Testimonials />
 
       {/* FAQ */}
       <section className="bg-cream py-24 md:py-32">
