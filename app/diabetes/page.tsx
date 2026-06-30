@@ -83,7 +83,8 @@ export default function DiabetesPage() {
           </>
         }
         subtitle="Controle real da glicemia, da hemoglobina glicada e do risco cardiovascular, com ajuste individualizado de medicação e acompanhamento contínuo."
-        image="/images/portrait-couch.jpg"
+        image="/images/herodiabetes.jpg"
+        imagePosition="center 22%"
         cta="Olá, Dra. Fabiana. Gostaria de agendar uma avaliação do diabetes."
         ctaLabel="Agendar avaliação do diabetes"
         seal="Formada UFC · Residência USP · Mestrado UNIFESP · CRM-CE 6123"

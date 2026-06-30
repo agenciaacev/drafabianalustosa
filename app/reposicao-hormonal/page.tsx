@@ -83,8 +83,8 @@ export default function ReposicaoHormonalPage() {
           </>
         }
         subtitle="Equilíbrio hormonal restaurado com base em exames, não em achismo. Avaliação completa antes de qualquer reposição."
-        image="/images/hero.jpg"
-        imagePosition="object-right-top"
+        image="/images/heroreposicaohormonal.webp"
+        imagePosition="center 20%"
         cta="Olá, Dra. Fabiana. Gostaria de agendar uma avaliação hormonal."
         ctaLabel="Agendar avaliação hormonal"
         seal="Formada UFC · Residência USP · Mestrado UNIFESP · CRM-CE 6123"

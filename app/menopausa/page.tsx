@@ -84,6 +84,7 @@ export default function MenopausaPage() {
         }
         subtitle="Avaliação hormonal completa para identificar a causa real dos seus sintomas, com reposição hormonal individualizada quando indicada."
         image="/images/sitting-wide.jpg"
+        mobileImage="/images/sitting-wide-mobile.webp"
         cta="Olá, Dra. Fabiana. Gostaria de agendar uma avaliação hormonal para menopausa."
         ctaLabel="Agendar avaliação hormonal"
         seal="Formada UFC · Residência USP · Mestrado UNIFESP · CRM-CE 6123"

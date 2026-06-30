@@ -52,9 +52,8 @@ export default function Hero() {
           />
 
           <div className="relative max-w-xl">
-            <div className="inline-flex items-center gap-3 mb-10" data-aos="fade-up">
-              <span className="w-8 h-px bg-gold/70" />
-              <p className="eyebrow">Endocrinologista em Fortaleza</p>
+            <div className="flex justify-center mb-10" data-aos="fade-up">
+              <p className="eyebrow whitespace-nowrap">Endocrinologista em Fortaleza</p>
             </div>
 
             <h1

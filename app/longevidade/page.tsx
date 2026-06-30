@@ -80,8 +80,8 @@ export default function LongevidadePage() {
           </>
         }
         subtitle="Prevenção ativa, com avaliação metabólica e hormonal completa, para corrigir desequilíbrios antes que virem doença."
-        image="/images/standing.jpg"
-        imagePosition="object-[30%_center]"
+        image="/images/herolongevidade.webp"
+        imagePosition="center 22%"
         cta="Olá, Dra. Fabiana. Gostaria de agendar uma avaliação preventiva de longevidade."
         ctaLabel="Agendar avaliação preventiva"
         seal="Formada UFC · Residência USP · Mestrado UNIFESP · CRM-CE 6123"

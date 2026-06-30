@@ -33,7 +33,7 @@
 
   /* Eyebrow label with hairline gold rule */
   .eyebrow {
-    @apply inline-flex items-center gap-3 font-body text-[11px] font-medium uppercase tracking-eyebrow text-taupe;
+    @apply inline-flex items-center gap-3 font-body text-[11px] font-medium uppercase tracking-eyebrow text-ink;
   }
   .eyebrow::before {
     content: "";

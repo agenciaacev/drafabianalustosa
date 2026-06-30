@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { clinic, whatsappLink } from "@/lib/content";
 
@@ -15,6 +16,8 @@ const nav = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const hamburguerBranco = pathname === "/emagrecimento" && !scrolled && !open;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -80,17 +83,17 @@ export default function Navbar() {
           aria-expanded={open}
         >
           <span
-            className={`h-px w-7 bg-ink transition-all duration-300 ${
+            className={`h-px w-7 transition-all duration-300 ${hamburguerBranco ? "bg-white" : "bg-ink"} ${
               open ? "translate-y-[7px] rotate-45" : ""
             }`}
           />
           <span
-            className={`h-px w-7 bg-ink transition-all duration-300 ${
+            className={`h-px w-7 transition-all duration-300 ${hamburguerBranco ? "bg-white" : "bg-ink"} ${
               open ? "opacity-0" : ""
             }`}
           />
           <span
-            className={`h-px w-7 bg-ink transition-all duration-300 ${
+            className={`h-px w-7 transition-all duration-300 ${hamburguerBranco ? "bg-white" : "bg-ink"} ${
               open ? "-translate-y-[7px] -rotate-45" : ""
             }`}
           />

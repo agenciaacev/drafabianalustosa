@@ -31,26 +31,32 @@ const fases = [
 
 const antesDepois = [
   {
-    label: "Emagrecimento",
+    label: "−11kg",
+    period: "2 meses de acompanhamento",
+    detail: "Perda de 11 kg em 2 meses com protocolo endocrinológico personalizado.",
+    antes: "/images/antesedepois/antes1.webp",
+    depois: "/images/antesedepois/depois1.webp",
+  },
+  {
+    label: "−50kg",
+    period: "18 meses de acompanhamento",
+    detail: "De 156kg para 106kg — 50 kg perdidos com acompanhamento contínuo.",
+    antes: "/images/antesedepois/antes2.webp",
+    depois: "/images/antesedepois/depois2.webp",
+  },
+  {
+    label: "−12kg",
+    period: "40 dias de acompanhamento",
+    detail: "Perda de 12 kg em apenas 40 dias de protocolo individualizado.",
+    antes: "/images/antesedepois/antes3.webp",
+    depois: "/images/antesedepois/depois3.webp",
+  },
+  {
+    label: "−15kg",
     period: "3 meses de acompanhamento",
-    detail: "Perda de 12 kg com manutenção de massa muscular e regularização hormonal.",
-    // Substitua pelos caminhos reais quando tiver as fotos
-    antes: "/images/portrait-couch.jpg",
-    depois: "/images/portrait-serious.jpg",
-  },
-  {
-    label: "Recomposição corporal",
-    period: "5 meses de acompanhamento",
-    detail: "Redução de gordura visceral e aumento de massa magra com ajuste metabólico.",
-    antes: "/images/standing.jpg",
-    depois: "/images/hero.jpg",
-  },
-  {
-    label: "Controle metabólico",
-    period: "4 meses de acompanhamento",
-    detail: "Normalização da hemoglobina glicada e redução de 9 kg com protocolo personalizado.",
-    antes: "/images/sitting-wide.jpg",
-    depois: "/images/location.jpg",
+    detail: "De 88kg para 73kg em apenas 3 meses de tratamento.",
+    antes: "/images/antesedepois/antes4.webp",
+    depois: "/images/antesedepois/depois4.webp",
   },
 ];
 
@@ -83,6 +89,7 @@ export default function EmagrecimentoPage() {
         }
         subtitle="Dieta e exercício são parte da solução, mas raramente são a causa do problema. O endocrinologista investiga o que ninguém investigou antes."
         image="/images/portrait-serious.jpg"
+        imagePosition="center 22%"
         cta="Olá, Dra. Fabiana. Gostaria de agendar uma consulta sobre emagrecimento."
       />
 
@@ -200,7 +207,7 @@ export default function EmagrecimentoPage() {
             </p>
           </div>
 
-          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {antesDepois.map((item, i) => (
               <BeforeAfterSlider
                 key={i}
