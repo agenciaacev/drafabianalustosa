@@ -28,10 +28,13 @@ export default function Navbar() {
   }, [open]);
 
   return (
+    <>
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled || open
+        scrolled
           ? "bg-cream/95 backdrop-blur-md shadow-[0_1px_0_rgba(202,177,149,0.4)]"
+          : open
+          ? "bg-cream"
           : "bg-transparent"
       }`}
     >
@@ -94,7 +97,9 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile menu */}
+    </header>
+
+      {/* Mobile menu — fora do <header> para não ser limitado pelo backdrop-blur */}
       <div
         className={`fixed inset-0 z-40 flex flex-col bg-cream px-6 pt-28 transition-all duration-500 lg:hidden ${
           open
@@ -124,10 +129,7 @@ export default function Navbar() {
         >
           Agendar pelo WhatsApp
         </a>
-        <p className="mt-8 font-body text-sm text-taupe">
-          {clinic.whatsappDisplay}
-        </p>
       </div>
-    </header>
+    </>
   );
 }
