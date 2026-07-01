@@ -30,7 +30,7 @@ const fases = [
   {
     n: "02",
     title: "Identificação de desequilíbrios antes que se tornem doença",
-    text: "Resistência à insulina, inflamação crônica, deficiência hormonal, sarcopenia precoce — identificamos o que está em curso muito antes do diagnóstico formal.",
+    text: "Resistência à insulina, inflamação crônica, deficiência hormonal, sarcopenia precoce: identificamos o que está em curso muito antes do diagnóstico formal.",
   },
   {
     n: "03",
@@ -40,7 +40,7 @@ const fases = [
   {
     n: "04",
     title: "Acompanhamento contínuo com reavaliação periódica",
-    text: "Os marcadores mudam, o plano acompanha. Cada retorno inclui nova avaliação para ajuste fino — o objetivo é manter equilíbrio de longo prazo.",
+    text: "Os marcadores mudam, o plano acompanha. Cada retorno inclui nova avaliação para ajuste fino, com objetivo de manter equilíbrio de longo prazo.",
   },
 ];
 
@@ -140,8 +140,8 @@ export default function LongevidadePage() {
                 que exames de rotina não captam.
               </p>
               <p>
-                Aqui a investigação vai além do check-up padrão — avaliação
-                hormonal, composição corporal e marcadores de risco — para agir
+                Aqui a investigação vai além do check-up padrão: avaliação
+                hormonal, composição corporal e marcadores de risco, para agir
                 enquanto ainda dá tempo de prevenir.
               </p>
             </div>

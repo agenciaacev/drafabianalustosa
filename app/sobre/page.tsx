@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 };
 
 const formacao = [
-  "Graduação em Medicina — Universidade Federal do Ceará (UFC)",
-  "Residência em Endocrinologia — USP (Universidade de São Paulo)",
-  "Mestrado em Endocrinologia e Metabolismo — UNIFESP / Escola Paulista de Medicina",
+  "Graduação em Medicina pela Universidade Federal do Ceará (UFC)",
+  "Residência em Endocrinologia pela USP (Universidade de São Paulo)",
+  "Mestrado em Endocrinologia e Metabolismo pela UNIFESP / Escola Paulista de Medicina",
   "CRM-CE 6123 · RQE 6609",
-  "Membro da SBEM — Sociedade Brasileira de Endocrinologia e Metabologia",
+  "Membro da SBEM (Sociedade Brasileira de Endocrinologia e Metabologia)",
 ];
 
 export default function SobrePage() {

@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 const creds = [
-  "Graduação em Medicina — UFC",
-  "Residência em Endocrinologia — USP",
-  "Mestrado em Endocrinologia e Metabolismo — UNIFESP",
+  "Graduação em Medicina pela UFC",
+  "Residência em Endocrinologia pela USP",
+  "Mestrado em Endocrinologia e Metabolismo pela UNIFESP",
   "CRM-CE 6123 · RQE 6609 · Membro da SBEM",
 ];
 

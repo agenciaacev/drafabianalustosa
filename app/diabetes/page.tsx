@@ -35,7 +35,7 @@ const fases = [
   {
     n: "03",
     title: "Ajuste de medicação e plano alimentar individualizado",
-    text: "Medicação ajustada ao seu perfil metabólico — não ao padrão genérico. Quando necessário, incluímos medicamentos modernos como os GLP-1, com protocolo individualizado.",
+    text: "Medicação ajustada ao seu perfil metabólico, não ao padrão genérico. Quando necessário, incluímos medicamentos modernos como os GLP-1, com protocolo individualizado.",
   },
   {
     n: "04",

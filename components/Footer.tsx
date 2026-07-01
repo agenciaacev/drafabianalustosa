@@ -93,7 +93,7 @@ export default function Footer() {
 
         <div className="mt-16 flex flex-col gap-3 border-t border-cream/15 pt-8 font-body text-xs text-cream/45 md:flex-row md:items-center md:justify-between">
           <p>
-            © {year} Dra. Fabiana Lustosa — Endocrinologista em Fortaleza CE
+            © {year} Dra. Fabiana Lustosa, Endocrinologista em Fortaleza CE
           </p>
           <p>{clinic.hours}</p>
         </div>

@@ -88,7 +88,7 @@ export default function EmagrecimentoPage() {
           </>
         }
         subtitle="Dieta e exercício são parte da solução, mas raramente são a causa do problema. O endocrinologista investiga o que ninguém investigou antes."
-        image="/images/portrait-serious.jpg"
+        image="/images/heroemagrecimento.webp"
         imagePosition="center 22%"
         cta="Olá, Dra. Fabiana. Gostaria de agendar uma consulta sobre emagrecimento."
       />

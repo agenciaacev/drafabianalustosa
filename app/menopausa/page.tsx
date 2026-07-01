@@ -30,7 +30,7 @@ const fases = [
   {
     n: "02",
     title: "Identificação do que está causando cada sintoma",
-    text: "Não todos os sintomas têm a mesma causa. Antes de prescrever, identificamos o que está desequilibrado e por quê — sem generalizar, sem achismo.",
+    text: "Não todos os sintomas têm a mesma causa. Antes de prescrever, identificamos o que está desequilibrado e por quê, sem generalizar, sem achismo.",
   },
   {
     n: "03",
@@ -83,8 +83,8 @@ export default function MenopausaPage() {
           </>
         }
         subtitle="Avaliação hormonal completa para identificar a causa real dos seus sintomas, com reposição hormonal individualizada quando indicada."
-        image="/images/sitting-wide.jpg"
-        mobileImage="/images/sitting-wide-mobile.webp"
+        image="/images/heromenopausa.webp"
+        imagePosition="center 20%"
         cta="Olá, Dra. Fabiana. Gostaria de agendar uma avaliação hormonal para menopausa."
         ctaLabel="Agendar avaliação hormonal"
         seal="Formada UFC · Residência USP · Mestrado UNIFESP · CRM-CE 6123"
@@ -141,7 +141,7 @@ export default function MenopausaPage() {
                 hormonal completo e seu risco individual.
               </p>
               <p>
-                A partir disso, o tratamento é ajustado para você — não copiado
+                A partir disso, o tratamento é ajustado para você, não copiado
                 de um protocolo padrão.
               </p>
             </div>

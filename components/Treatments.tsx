@@ -29,7 +29,7 @@ export default function Treatments() {
           </h2>
           <p className="mt-5 font-body text-base text-ink-soft md:text-lg">
             Não com uma prescrição pronta. Não existe protocolo igual para dois
-            pacientes — existe uma investigação séria feita para você.
+            pacientes. Existe uma investigação séria feita para você.
           </p>
         </div>
 
@@ -106,7 +106,7 @@ export default function Treatments() {
           </div>
           <p className="max-w-xs font-body text-sm leading-relaxed text-cream/70">
             Gordura visceral, massa muscular segmentada, taxa metabólica basal e
-            hidratação — medidos em minutos. O que não é medido não é
+            hidratação, medidos em minutos. O que não é medido não é
             acompanhado.
           </p>
         </div>

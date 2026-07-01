@@ -30,12 +30,12 @@ const fases = [
   {
     n: "02",
     title: "Identificação da causa da queda hormonal",
-    text: "Antes de repor, identificamos o que está em queda e por quê. Causas diferentes exigem abordagens diferentes — não existe protocolo único.",
+    text: "Antes de repor, identificamos o que está em queda e por quê. Causas diferentes exigem abordagens diferentes. Não existe protocolo único.",
   },
   {
     n: "03",
     title: "Plano de reposição individualizado, com dose ajustada para você",
-    text: "A reposição é prescrita na dose, via e forma adequadas ao seu perfil. Para homens, para mulheres, para cada fase da vida — o plano é construído a partir dos seus exames e objetivos.",
+    text: "A reposição é prescrita na dose, via e forma adequadas ao seu perfil. Para homens, para mulheres, para cada fase da vida: o plano é construído a partir dos seus exames e objetivos.",
   },
   {
     n: "04",

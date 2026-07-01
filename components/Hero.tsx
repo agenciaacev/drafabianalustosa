@@ -9,14 +9,14 @@ export default function Hero() {
         <div className="relative order-first lg:order-last overflow-hidden">
           {/* Mobile */}
           <img
-            src="/images/hero2.webp"
+            src="/images/heromain.webp"
             alt=""
             className="lg:hidden block w-full h-auto"
             style={{ objectPosition: "50% 15%" }}
           />
           {/* Desktop */}
           <img
-            src="/images/hero2.webp"
+            src="/images/heromain.webp"
             alt="Dra. Fabiana Lustosa, endocrinologista em Fortaleza"
             className="hidden lg:block w-full h-auto lg:absolute lg:inset-0 lg:h-full lg:object-cover"
             style={{ objectPosition: "50% 15%" }}
@@ -109,7 +109,7 @@ export default function Hero() {
               data-aos-delay="300"
             >
               <span>{clinic.crm}</span>
-              <span>Fortaleza — CE</span>
+              <span>Fortaleza, CE</span>
             </div>
           </div>
         </div>

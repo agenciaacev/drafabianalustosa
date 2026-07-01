@@ -63,9 +63,9 @@ export default function Intro() {
             data-aos="fade-up"
           >
             A endocrinologia existe exatamente para investigar o que está por
-            baixo dos sintomas — hormônios, metabolismo, composição corporal —
-            e criar um plano que funcione para a sua vida real, não para um
-            manual genérico.
+            baixo dos sintomas, como hormônios, metabolismo e composição
+            corporal, e criar um plano que funcione para a sua vida real, não
+            para um manual genérico.
           </p>
         </div>
       </div>
